@@ -1,0 +1,124 @@
+
+
+Maven :
+
+  * For ajava build tool we used apache maven , basing on work for spring boot java related any thing code we can build using appache.
+
+what is a maven
+================
+
+    * maven is tool that is used to compile validate codes and analyise the test cases in the code.
+     * it manages the buluiding ,reporting and documention from source control management (SCM)
+     * maven projects are configured through project object model  (pom)
+     *pom.xml file contains documention for all of the objects,properties, methods and events.
+
+
+what maven is capable for
+========================
+
+
+      * infomation of the project is centeraloized through maven 
+       * our software project is modeled by it 
+       * data about the software projects is gathered and then build it self 
+       * document the software and our project
+      * Deployable arifacts can be generated from source code 
+      * source code is complied , packed,test and distributed
+      * reports is created ,website is generated for the project
+
+Artifacts:-
+--------
+
+ -- When we package the source code management from maven will getting some files which are extenstion are .EAR, .JAR
+
+Maven bulid Life cycle 
+======================
+
+ * Maven has a two things life cycle phases 
+     -----by defaualt build life cycle-----
+* In maven the build is run is using predefined and orderd set of steps to call the build life cycle 
+* The build task that will be performed during each phases are determined by configuration in the project file and in the particular selected package 
+   -------------project file is nothing but a POM.XML File------------------------
+* Maven relies on the build life cycle to define the process of the building and distributing artifacts ex:- (Jar files,War files)
+
+
+   *---There are three built life cycle :-
+      ==================================
+             
+          1) Default :- it handles project building and deployment 
+          2) clean :-    handles project cleaning 
+          3) site   :-   handles project site genration 
+
+
+    MAVEN ARCHITECTURE:
+   ==================
+
+ plugin     plugin2  plugin3 plugin4
+
+ ----------------------------------- 
+           core
+ ------------------------------------
+
+ remote                  local 
+ repository            repository
+
+  * local repository refering to windows local mechine.
+  * remore repository refering to organization.
+
+
+  MAVEN ARTIFACTS:
+  ===============
+ *An artifact is a file resulting from packing a project
+ *can be a jar, war, ear, .xmlfile, for example
+ *Artifacts are deployed in repostories so they can be used as dependencies by other projects.
+ *Artifacts are identified by three components
+ *Groupid-- An unique identifer for a group of relatede artifacts usually  named like java packages(ex: pt.jpereia.mobile)
+ *Artifacts--An unique identifier, w…
+
+    MAVEN REPOSITORY FLOW :-
+    =====================
+    
+ 
+     -------------
+       Remote Repo
+    ---------------         step 2
+
+                                             -----------------
+                                              developer
+       Step 3                                -------------------
+
+
+     ------------             step 1
+     local repo               step 4
+     ----------
+
+    
+    Step 1: - when devloper gexcutes mvn command it will go and checkin local repostory it found the dependices are plugin in the local repo developer will see the output 
+    Step 2: -  If not founding local repository from developer machines and it will go and search remote repository
+    step 3:-  From remote repository required dependices or piugin will get store in local repository 
+    Step 4:-   from local repository developer will get the outpiut 
+
+     Interviw questions :-
+   ======================
+
+       For the first time when we executes MVN command it will take more time , but when we excute for the second time it will take less time because the repository dependies is alredy stored in local repositories.
+
+
+     Project object models :-
+     ---------------------
+
+      * Pom for the short 
+      * XML file located at the root of the project (Pom.xml)
+      *  It includes configuration for your project including information about the project 
+      * configuration details to about the project
+      * contains defaults values for the most of the projects Ex:- source dir, target dir
+      * dependices of the project 
+      * configuration is about plugins of the goals
+     *used repositories 
+
+      Declaring Dependencies:-
+    ========================
+ 
+          * While declaring the dependicies coordinates of the artifacts must be provided.
+          * group id:- A unquie identifier for the group of related artifact
+          * Artifacts :- An artifact is a file which is made after packaging a project and artifact id is a uniquie identifier within the content of group id and it is identifies the artifacts 
+          * version : -  It is an identifier for the release or build number of the` project  
