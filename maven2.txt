@@ -1,0 +1,48 @@
+
+   Maven through terminal :- 
+   ======================
+
+    * Install the maven tar file after verifying the signature
+    * After installing the maven,check its version from unbantu terminal by using the below command 
+        
+                .Mvn - version
+
+  To generate java project creating project :-
+  =========================================
+
+
+   mvn archetype:generate -DgroupId=com.example -DartifactId=helloworld -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+
+   Maven life cycle phases:-
+  =========================
+   
+   -> validate :- check if the project is correct having all necessary information code 
+           Mvn validate
+
+   -> compile :- compile the source code of the project 
+                     mvn compile
+    -> Test :- Test the compile source code using suiable unit testingframe work these tests should not require the code be packaged or deployed
+                        mvn test
+    -> package :- take the compile code and package it in its distributed format such as Jar,War.
+                  Mvn package
+    -> Integeration test :- Process and deploy the package into environment where integeration test can be run
+
+    -> Verify :-  Run any checks to verify the package is valid and meets quality criteria
+    
+    -> Install :- Install the package into local repository for use as dependency in other projects locally 
+
+    -> Deploy :- Done in an integeration or release environment  copies the final packages to the remote repository for sharing with others developers and projects.
+
+     Interview Question :-
+    =====================
+          -> what is .M2 ?
+           a) .M2 is local repository of appache maven 
+             * local repository is a .M2 where depencyies plugins are stored 
+
+ Note :- 
+======
+     Appache maven has an advantage that is when we run any of three life cycle phases which will also include previous life cycle phases as well
+
+      Ex:- If we learn mvn package <which is 4th phase > , which will also we run the previous phases <validate, compile , test >
+       
