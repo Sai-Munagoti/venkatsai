@@ -1,0 +1,76 @@
+
+  Configuration :-
+=================
+
+
+       Things to keep in mind before changing configurational changes
+  
+       1) where to change 
+       2) Backup 
+       3) How to change 
+       4) Try in local environment 
+       5) Documentation
+
+
+   Snapshot / Backup :-
+  ====================
+
+   For wildfly ---configuration ---->home folderof wildfly  ----->Standalone---> configuration --->standalone _xml_history
+
+Ex: for example we can take a if any corrputed in that case we can take snapshot on previous which is running in that place outside as a same name and we can start server
+    
+
+Different status of the artifacts deployed in widfly ?
+
+:- In the wildfly deployed artifacts can have various status stateincluding the deployed
+
+ * Deployed :- The appicatiom is sucessfully running onthe wlidfly server and accesible to user
+ * Undeployed :- The application has been removed from the server and is hot currently running
+ * Failed :-   The deployement process encountered as error and the application is not running 
+ * Disable:-  The applicvation is intentionally stopped by adminstator and cannot be accessed until enabled 
+ * Suspended:- The application is temporrily pause and can be resumed later
+ * Redeploying :- The application is currently being updatd with new code is not fully avabile while the redeployment process is going 
+
+Accessing deployment status:-
+
+ --> Wildfly management console :-
+ ------------------------------
+  You can view the status of deployed artifacts through the wildfly admin console , which provides a list of deployments with their current state.
+
+CL (command line interface) :-
+-------------------------
+           Using the wildfly commmand line interface you can query the status of deployment with managements commands.
+
+Note :- 
+---
+    Indicating whether the application is currently running not deployed encountered n error during deployment intentionally deactivated temporaly paused or is in the process
+   of being re - deployed with updates.
+
+
+ Domain controller and host controller in the wild fly :-
+----------------------------------------------------
+ 
+* In jboss wildfly a domain controller is the centeral management point for the group of the server within a domain reposible for maintaining the overall configuration andpolicy 
+ * While a host controller is a seperate process running on each server within the domain communating with domain controller to manage the individual server instances on that host machine.
+
+Essentially the domain controller dicates the overall configuration , and the host controllers execute those configurations on their respectives server.
+
+Key points:-
+--------
+aout domain and host controller
+  
+ * Domain controller :-
+---------------------
+  
+ -> Acts as the centeral management point for the entire domain 
+ -> Stores the domain - wide configuration in a file called "diomain.xml"
+           {Home folder ---> Diomain------> configuration -----> Domain .xml}
+-> Responsible for distrubing cofiguration changes to all host controllers within the domain 
+
+* Host Controller:- 
+------------------
+
+->  manages the application server instances running on asepicfic host 
+-> Reads its configured from a "host .xml" file spefic to that host   { home folder ----> Domain -----> configuration ....> host .xml }
+ -> Communicate with the domai  comtroller to recive configuration updates and start /stop server instance
+ 
