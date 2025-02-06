@@ -1,0 +1,101 @@
+plugin installation :- They are two ways to install the pugins 
+   -> automatically
+   -> Manually 
+  
+1) Automatically :- Once the login jenkins Gui left side you will see option mange jenkins 
+ click on manage jenkins in 1st tab we have system configuration Under that we se plugins click on plugin go to avaliable plugins search for the plugins 
+which is required and select the plugin under the list once we select plugin install button will highleted then click on imstall
+
+2) Manually :- Under plugins tab go for the avalible plugins which is required onece click on plugins we tab will be open click on the realse button then you see
+various version of plugins go for the plugins which is required specfied version undr the installoption direct link we have click on that direct link plugin will get download to our local machine when the downloaded in manual way again we need to deploy to 
+to jenkins , in jenkins gui plugins tabs click on advance settings and click on choose file and upload and deploy it 
+when we install plugins automatic way plugin in extension is jpi(jenkins plugins)
+when we install plugins manual way plugin extension is HPI(hudson pugin)
+
+Plugins :-
+=========
+ Where we can add and remove or disable, enable, plugins that can be extend the functionality of jenkins.
+
+How to install the jenkins
+------------------------
+
+--> Manage jenkins ----> Plugind ---> Insatll Plugins ---> Search for ythe plugin name  
+which we wanted to uninstall select the plugins the unistall button will be highlighted once clicked on uninstall plugin will get unistalled
+ 
+How to update the plugins :
+--------------------------
+
+Manage jenkins ---> Plugins ---> Updates---> select the plugins then update button will be highlieted once clicked on update , plugin will get updated.
+
+Note :- 
+====
+ In the realtime we should not update the plugins directly reason being there may be changes will be encountered It will recommened to update the plugins in our local machine
+First were other team members will not effected if anything goes wrong.
+
+How to create the users:-
+--------------------------
+
+Manages Jenkins the security they the option of users (Create , delete, modify users that can log in to this jenkins)
+
+Click on the users we can see optuon +create user , It will ask the username , pasword, full name, email address.
+ Then click on ceate user
+
+How to give a permission to user:
+===============================
+  
+  Again the manage jenkins security  , Secure jennkins define who is allowed to acess to use the system the we see authorization tab in that add user button , it will ask user id click on ok , you should see user 
+ is added then give required permission user by checking the box  ( minimum acessed give over all read) By default whatever we create user for user will get store in 
+ ---> jenkins owner user data store ----> this is stuabiable for smaller setup when you have no existing user database where 
+ the other option is LDAP (Light weight directory access protocol)
+
+Authorization strategy :
+_______________________
+  
+ BY default we will beseeing project - based matrix authorization strategy with this we can manages the authorization based on the options avaliable under strategy 
+ ex: - credtinal , agents , job , run
+ 
+Matrix authorization strategy :-
+------------------------------
+
+It is allows configuration the lowest level permission such as atarting new builds, configuration item or deleting them , individually 
+
+Note:-
+=====
+{ In real time we used project based matrix or matrix authorization statergcy}
+
+Jenkinns project :-   ( project or job both are same it is combation of one or more task )
+================
+
+  These are default thing comes 
+
+1)  Freestyle project 
+2) maven project 
+3) Pipeline (work flow) 
+4) Multi configuration project 
+5) folder 
+6) multi branch pipeline
+7) organization folder
+
+ Note :-
+     RBAC ; Role base acess control one of the way were we can secured jenkins
+
+HOW TO CREATE THE JOB OR PROJECT:
+================================
+
+In Jenkins GUI + new items to the left side click on item tags select any of the item click on ok button which will be highlighted the job configuration is consist of general (where we can give information or description about the project) source code management where will be passing urls of the repositories, next build triggers (in what way wanted to trigger/build the job, build environment, build steps (where we can add tasks) post build actions.
+
+ ===>   source code management :- where we will be passing url of reposotory
+ ===> build tigers  :- in what way we wanted to triggers the job
+ ====>   build environment 
+  =====>  build steps :- were we can add the task 
+ ======> post build actionsb
+ 
+HOW TO GET CREATE FREESTYLE JOB:
+===============================
+new item give the job name click on then go to the build steps in configuration click on add build step select that dir, click on save the click on  build now check for the console output.
+
+-->WHAT IS BLUE OCEAN:
+======================
+ Blue ocean rethinks user experience designed from the group up for Jenkins pipelines and compatible with freestyle jobs.
+
+ 
